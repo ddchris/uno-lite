@@ -1,0 +1,62 @@
+{
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --port 3339 --open",
+    "lint": "eslint .",
+    "typecheck": "vue-tsc",
+    "preview": "vite preview",
+    "test": "vitest",
+    "up": "taze major -I",
+    "postinstall": "npx simple-git-hooks",
+    "i18n:check": "node ./scripts/i18n-check.cjs"
+  },
+  "dependencies": {
+    "@vueuse/core": "catalog:frontend",
+    "element-plus": "catalog:",
+    "node-fetch": "catalog:",
+    "vue": "catalog:frontend",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:dev",
+    "@iconify-json/carbon": "catalog:build",
+    "@types/node": "catalog:dev",
+    "@unocss/eslint-plugin": "catalog:dev",
+    "@unocss/inspector": "catalog:",
+    "@vitejs/plugin-vue": "catalog:build",
+    "@vue-macros/volar": "catalog:dev",
+    "@vue/test-utils": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-format": "catalog:dev",
+    "jsdom": "catalog:build",
+    "lint-staged": "catalog:dev",
+    "openai": "catalog:",
+    "simple-git-hooks": "catalog:dev",
+    "taze": "catalog:dev",
+    "ts-node": "catalog:",
+    "typescript": "catalog:dev",
+    "unocss": "catalog:build",
+    "unplugin-auto-import": "catalog:build",
+    "unplugin-vue-components": "catalog:build",
+    "unplugin-vue-macros": "catalog:build",
+    "unplugin-vue-router": "catalog:build",
+    "vite": "catalog:conflicts_build_h6_4_1",
+    "vitest": "catalog:dev",
+    "vue-i18n-extract": "catalog:",
+    "vue-tsc": "catalog:dev"
+  },
+  "resolutions": {
+    "unplugin": "catalog:build",
+    "vite": "catalog:build"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

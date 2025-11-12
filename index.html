@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Vitesse Lite</title>
+    <meta name="description" content="Opinionated Vite Starter Template" />
+  </head>
+  <body class="font-sans dark:text-white dark:bg-hex-121212">
+    <div id="app"></div>
+    <noscript>
+      <div>Please enable JavaScript to use this application.</div>
+    </noscript>
+    <script>
+      ;(function () {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        const setting = localStorage.getItem('color-schema') || 'auto'
+        if (setting === 'dark' || (prefersDark && setting !== 'light'))
+          document.documentElement.classList.toggle('dark', true)
+      })()
+    </script>
+    <!-- Vue runtime，必須是 ES module 版本 -->
+    <!-- <script type="module">
+      import { createApp, defineCustomElement } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+      window.Vue = { createApp, defineCustomElement } // 給外部 Web Component 用
+    </script> -->
+
+    <!-- 引入你的 Web Component -->
+    <!-- <script defer type="module" src="https://ddchris.github.io/my-widget/base-button.js"></script> -->
+    <script type="module" src="/src/main.ts"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/ddchris/my-widget@v1.0.0/my-widget.es.js"></script> -->
+  </body>
+</html>
