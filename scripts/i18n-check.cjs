@@ -206,6 +206,8 @@ async function processMissingKeys(missingKeys, localesData, langs) {
 ================================================================================
 📌 使用說明 / 上手指南
 
+資料夾最外層建立 scripts 放 i18n-check.cjs
+
 1️⃣ Node.js 環境
 - Node.js >= 18（內建 fetch 可用，或安裝 node-fetch）
 - npm 或 pnpm
@@ -232,7 +234,8 @@ help    幫助    help    도움   ...
   - kr.json
 
 5️⃣ 執行指令
-node scripts/i18n-check-google.cjs
+package.json scripts 加入："i18n:check": "node ./scripts/i18n-check.cjs"
+pnpm i18n:check
 
 6️⃣ 功能
 - 自動從 Google Sheet 更新 locale JSON（忽略 detail 欄）
