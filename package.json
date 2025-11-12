@@ -16,7 +16,7 @@
   "dependencies": {
     "@vueuse/core": "catalog:frontend",
     "element-plus": "catalog:",
-    "node-fetch": "catalog:",
+    "node-fetch": "catalog:conflicts_conflicts_node-fetch_h:_h3_3_2",
     "vue": "catalog:frontend",
     "vue-i18n": "catalog:",
     "vue-router": "catalog:frontend"

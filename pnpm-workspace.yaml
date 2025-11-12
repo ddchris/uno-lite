@@ -42,6 +42,20 @@ catalogs:
     vue-router: ^4.5.1
   conflicts_build_h6_4_1:
     vite: ^6.4.1
+  'conflicts_node-fetch_h:':
+    node-fetch: '^:'
+  'conflicts_node-fetch_h3:':
+    node-fetch: '^3:'
+  'conflicts_node-fetch_h3_:':
+    node-fetch: '^3.:'
+  'conflicts_node-fetch_h3_3:':
+    node-fetch: '^3.3:'
+  'conflicts_node-fetch_h3_3_:':
+    node-fetch: '^3.3.:'
+  'conflicts_conflicts_node-fetch_h:_h3_3_2:':
+    node-fetch: '^3.3.2:'
+  conflicts_conflicts_node-fetch_h:_h3_3_2:
+    node-fetch: ^3.3.2
 
 onlyBuiltDependencies:
   - esbuild
